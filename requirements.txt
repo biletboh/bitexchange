@@ -1,0 +1,13 @@
+requests
+httpretty
+nose
+mock
+coverage
+nose-cov
+sniffer
+##
+Quandl
+python-decouple
+pandas
+##
+bitfinex
