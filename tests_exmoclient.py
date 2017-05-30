@@ -29,7 +29,7 @@ print(tradeclient2.place_order('BTC_USD', 1, 2000, 'buy'))
 
 # Test 2
 print('Test 2:')
-print(tradeclient2.open_orders())
+print(tradeclient2.trade_deals('BTC_USD', 1))
 
 # Test 3
 print('Test 3:')

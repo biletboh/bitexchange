@@ -75,29 +75,33 @@ class ExmoTradeClient:
 
         return json_resp 
 
-    def open_orders(self):
+    def trade_deals(self, pair, limit=1):
         """
-        Order's status.
+        Return last deal.
+        :param pair:
+        :param limit:
         :return:
         """
+
         params = {
             "nonce": self._nonce,
+            "pair": pair
         }
 
         headers = self._sign_payload(params)
 
-        api_url = '/user_open_orders'
+        api_url = '/user_trades'
         r = requests.post(self.URL+api_url, params, headers=headers, verify=True)
         json_resp = r.json()
-        if json_resp:
-            return json_resp 
+        if json_resp['BTC_USD']:
+            return json_resp['BTC_USD'][0] 
         else:
-            return 'Message: You have no active orders' 
+            return 'Message: You have no trades' 
  
     def deposit_usd(self):
         return 'Refer to the third party deposit addresses. Exmo uses services such as Epay and MoneyPolo' 
 
-    def deposit_btc(self, *params):
+    def deposit_btc(self):
         """
         Get btc address.
         :return:
