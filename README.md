@@ -7,7 +7,7 @@ The package helps to automatically buy bitcoin on the exchange, where it is chea
 0. Set up virtual environment. `conda create --name virtenv python=3.5`
 1. Activate virtual environment `source activate virtenv`
 2. Install requirements `pip install -r requirements`
-3. Create `settings.ini` file with configuration (provide key without quotes):
+3. Create `settings.ini` file with configuration (provide keys without any quotes):
 
 ```
 [bitexchange]
@@ -29,5 +29,5 @@ To test compare algorithm that evaluate the best exchange to buy and sell bitcoi
 
 ### Take into the consideration!
 
-Some API option are unavailable
+Some API options are unavailable
 
