@@ -16,7 +16,7 @@ def compare_exchange(tradeclient, tradeclient2, bitfinex, exmo):
         buy_order = tradeclient2.place_order('BTC_USD', 1, exmo[0], 'buy')
         
         # Get bitcoin deposit address at bitfinex
-        deposit_btc_bitfinex = tradeclient.deposit_btc('bitcoin', 'exchange')
+        deposit_btc_bitfinex = tradeclient.deposit_btc('bitcoin', 'exchange', renew=0)
 
         # Withdraw bitcoins from exmo to bitfinex
         while True:
