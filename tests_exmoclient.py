@@ -47,4 +47,7 @@ print(tradeclient2.withdraw_crypto(1, 'BTC', 'af82hfhp2hpSDFKHUIEH'))
 print('Test 6:')
 print(tradeclient2.withdraw_usd())
 
+# Test 7
+print('Test 7:')
+print(tradeclient2.ticker())
 

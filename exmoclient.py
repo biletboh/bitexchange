@@ -153,3 +153,20 @@ class ExmoTradeClient:
 
     def withdraw_usd(self):
         return 'No API available for usd withdrawal at exmo'
+
+    def ticker(self):
+        """
+        Get btc address.
+        :return:
+        """
+        headers = {"Content-type": "application/x-www-form-urlencoded"}
+        api_url = '/ticker'
+        r = requests.post(self.URL+api_url, headers=headers, verify=True)
+        json_resp = r.json()
+
+        try:
+            json_resp            
+            return json_resp['BTC_USD']  
+        except:
+            return 'Message: Something went wrong' 
+
