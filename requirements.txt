@@ -10,4 +10,4 @@ Quandl
 python-decouple
 pandas
 ##
-bitfinex
+git+https://github.com/biletboh/bitfinex.git
